@@ -11,6 +11,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,6 +19,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -31,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     Button PasswordInfo;
     Button ViewPassword;
     Button Connect;
+    Button Return;
+
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -45,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
         PasswordInfo = findViewById(R.id.password_info);
         ViewPassword = findViewById(R.id.viewPassword);
         Connect = findViewById(R.id.connect);
+        Return = findViewById(R.id.return_btn);
+
+
+
 
 
         //view password when προβολή button is being pressed
@@ -88,28 +99,68 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Log In
+        //Log In with validations
         Connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(TextUtils.isEmpty(UsernameField.getText().toString()) || TextUtils.isEmpty(PasswordField.getText().toString())){
+                     //Check Credentials
+                     validateUserID();
+                     validatePassword();
 
-                    Toast.makeText(MainActivity.this,"Username/Password required!", Toast.LENGTH_LONG).show();
-                }else{
                     //proceed to login
                     try {
                         login();
                     } catch (Exception e) {
                         Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
                     }
-                }
+
 
 
             }
         });
 
     }
+    //UserId Validator
+    private boolean validateUserID(){
+
+        String userInput = UsernameField.getText().toString().trim();
+        if(userInput.isEmpty()){
+
+            UsernameField.setError("Field can't be empty!");
+            return false;
+
+        }
+        else if(!RegExValidators.USER.matcher(userInput).matches()){
+
+            UsernameField.setError("Invalid UserID type!");
+            return false;
+        }else{
+            UsernameField.setError(null);
+            return true;
+        }
+    }
+    //Password validator
+    private boolean validatePassword(){
+
+        String userInput = PasswordField.getText().toString().trim();
+        if(userInput.isEmpty()){
+
+            PasswordField.setError("Field can't be empty!");
+            return false;
+
+        }
+        else if(!RegExValidators.USER.matcher(userInput).matches()){
+
+            PasswordField.setError("Invalid Password type!");
+            return false;
+        }else{
+            PasswordField.setError(null);
+            return true;
+        }
+    }
+
+
 
     //dialog window for pop up message
     private void showPasswordDialog(){
@@ -148,6 +199,31 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void showAlertDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialogTheme);
+        View view = LayoutInflater.from(MainActivity.this).inflate(
+                R.layout.error_layout,
+                (ConstraintLayout)findViewById(R.id.layoutDialogContainer)
+
+        );
+        builder.setView(view);
+        ((TextView)view.findViewById(R.id.mytext)).setText(getResources().getString(R.string.userinfo));
+        ((Button)view.findViewById(R.id.return_btn)).setText(getResources().getString(R.string.btn_mesg));
+        AlertDialog alertDialog = builder.create();
+
+        view.findViewById(R.id.return_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
+
+        if(alertDialog.getWindow() != null){
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        }
+        alertDialog.show();
+    }
+
 
     //login method
     public void login(){
@@ -165,7 +241,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, MainPage.class));
 
                 }else {
-                    Toast.makeText(MainActivity.this,"Login Failed!", Toast.LENGTH_LONG).show();
+                     showAlertDialog();
+                    //Toast.makeText(MainActivity.this,"Login Failed!", Toast.LENGTH_LONG).show();
 
                 }
             }
