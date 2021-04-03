@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
             return false;
 
         }
-        else if(!RegExValidators.USER.matcher(userInput).matches()){
+        else if(!RegExValidators.PASSWORD.matcher(userInput).matches()){
 
             PasswordField.setError("Invalid Password type!");
             return false;
@@ -225,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     //login method
     public void login(){
         LoginRequest loginRequest = new LoginRequest();
@@ -239,6 +240,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"Login Successful!", Toast.LENGTH_LONG).show();
                     //get to the main page after login
                     startActivity(new Intent(MainActivity.this, MainPage.class));
+
 
                 }else {
                      showAlertDialog();

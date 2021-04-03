@@ -28,9 +28,5 @@ public class ApiClient {
         return userService;
     }
 
-    public static BookService getBookService() {
-        BookService bookService = getRetrofit().create(BookService.class);
 
-        return bookService;
-    }
 }
