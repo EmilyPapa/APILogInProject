@@ -2,7 +2,9 @@
     <string name="app_name">Android Project</string>
     <string name="passinfo">τουλάχιστον 8 χαρακτήρες (2 κεφαλαία, 3 πεζά, 1 ειδικός χαρακτήρας, 2 νούμερα)</string>
     <string name="userinfo">τουλάχιστον 6 χαρακτήρες ( 2 κεφαλαία, 4 νούμερα)</string>
+    <string name="error">Λανθασμένα στοιχεία. Έχετε υποβάλλει λάθος στοιχεία.</string>
     <string name="invalid_name">Please enter valid UserID</string>
     <string name="invalid_password">Please enter a valid Password</string>
-    <string name="btn_mesg">ΕΠΙΣΤΡΟΦΗ</string>
+    <string name="btn_mesg">Επιστροφή</string>
+    <string name="TitleWhichYouWantToDisplay">Σύνδεση</string>
 </resources>

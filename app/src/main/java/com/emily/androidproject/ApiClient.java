@@ -7,6 +7,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
+    //this is the main client and Retrofit builder
+    // Via Retrofit I am making my API call
+
     private static Retrofit getRetrofit(){
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);

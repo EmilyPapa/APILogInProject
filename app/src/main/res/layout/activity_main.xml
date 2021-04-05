@@ -9,6 +9,19 @@
     android:focusable="false"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="#000000"
+        android:backgroundTint="@color/black"
+        android:paddingTop="18dp"
+        android:text="Σύνδεση"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+
 
     <TextView
         android:layout_width="wrap_content"

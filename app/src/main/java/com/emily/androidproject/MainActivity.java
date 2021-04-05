@@ -1,5 +1,6 @@
 package com.emily.androidproject;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -8,6 +9,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -19,10 +21,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
-import com.basgeekball.awesomevalidation.AwesomeValidation;
-import com.basgeekball.awesomevalidation.ValidationStyle;
-import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,12 +39,16 @@ public class MainActivity extends AppCompatActivity {
     Button Return;
 
 
-
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
 
         UsernameField = findViewById(R.id.username_txt);
         PasswordField = findViewById(R.id.password_txt);
@@ -53,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPassword = findViewById(R.id.viewPassword);
         Connect = findViewById(R.id.connect);
         Return = findViewById(R.id.return_btn);
+
 
 
 
@@ -121,6 +126,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
+
+
     //UserId Validator
     private boolean validateUserID(){
 
@@ -162,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    //dialog window for pop up message
+    //dialog window for pop up message for password
     private void showPasswordDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialogTheme);
         View view = LayoutInflater.from(MainActivity.this).inflate(
@@ -180,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
 
     }
-    //dialog window for pop up message
+    //dialog window for pop up message for username
     private void showUserIDDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialogTheme);
         View view = LayoutInflater.from(MainActivity.this).inflate(
@@ -198,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
 
     }
-
+    //alert dialog for error if user has set wrong user name and password
     private void showAlertDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialogTheme);
         View view = LayoutInflater.from(MainActivity.this).inflate(
@@ -207,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
 
         );
         builder.setView(view);
-        ((TextView)view.findViewById(R.id.mytext)).setText(getResources().getString(R.string.userinfo));
+        ((TextView)view.findViewById(R.id.mytext)).setText(getResources().getString(R.string.error));
         ((Button)view.findViewById(R.id.return_btn)).setText(getResources().getString(R.string.btn_mesg));
         AlertDialog alertDialog = builder.create();
 
@@ -223,7 +232,6 @@ public class MainActivity extends AppCompatActivity {
         }
         alertDialog.show();
     }
-
 
 
     //login method
@@ -242,9 +250,11 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, MainPage.class));
 
 
-                }else {
+
+
+                } else {
                      showAlertDialog();
-                    //Toast.makeText(MainActivity.this,"Login Failed!", Toast.LENGTH_LONG).show();
+
 
                 }
             }
