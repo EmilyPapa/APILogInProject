@@ -1,5 +1,7 @@
 package com.emily.androidproject;
 
+
+//model class
 public class LoginResponse {
 
     private int expires_in;

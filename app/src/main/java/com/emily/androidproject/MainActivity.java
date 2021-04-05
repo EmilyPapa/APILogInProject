@@ -48,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
+        //elements declarations
         UsernameField = findViewById(R.id.username_txt);
         PasswordField = findViewById(R.id.password_txt);
         UserInfo = findViewById(R.id.user_info);
@@ -57,9 +56,6 @@ public class MainActivity extends AppCompatActivity {
         ViewPassword = findViewById(R.id.viewPassword);
         Connect = findViewById(R.id.connect);
         Return = findViewById(R.id.return_btn);
-
-
-
 
 
 
@@ -253,6 +249,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 } else {
+                    //show alert dialog if an error happens due to user validation
                      showAlertDialog();
 
 

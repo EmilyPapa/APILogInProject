@@ -8,7 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
     //this is the main client and Retrofit builder
-    // Via Retrofit I am making my API call
+    //Builder will be accessed every time we make API calls
+    //Converts Json objects to Java Objects with GsonConverterFactory
 
     private static Retrofit getRetrofit(){
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
@@ -25,6 +26,7 @@ public class ApiClient {
         return retrofit;
     }
 
+    //accessing the builder
     public static UserService getUserService(){
         UserService userService = getRetrofit().create(UserService.class);
 

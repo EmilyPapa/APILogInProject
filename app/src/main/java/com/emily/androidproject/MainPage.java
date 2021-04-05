@@ -28,15 +28,24 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainPage extends AppCompatActivity {
     Button settings;
+    Button play;
+    Button books;
+    Button misc;
+    Button link;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
 
-
-
+        //elements declarations
+        play = findViewById(R.id.play_btn);
+        books = findViewById(R.id.books_btn);
+        misc = findViewById(R.id.misc_btn);
+        link = findViewById(R.id.link_btn);
         settings = findViewById(R.id.settings_btn);
+
+        //settings button method on click
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
