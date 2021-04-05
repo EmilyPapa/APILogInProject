@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b1b1d"
+    tools:context=".MainPage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="#000000"
+        android:backgroundTint="@color/black"
+        android:paddingTop="18dp"
+        android:text="Ρυθμίσεις"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="125dp"
+    android:layout_marginLeft="33dp"
+    android:textColor="@color/white"
+    android:textSize="15sp"
+    android:text="Ειδοποιήσεις"/>
+
+    <Switch
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="293dp"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="193dp"
+        android:layout_marginLeft="33dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="Διαγραφή όλων των περιοδικών"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="264dp"
+        android:layout_marginLeft="33dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="Γλώσσα"/>
+
+    <Button
+        android:id="@+id/lang_btn"
+        android:layout_width="10dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginLeft="333dp"
+        app:backgroundTint="@android:color/transparent"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:foreground="@drawable/ic_arrow_right"
+
+        />
+
+    <Button
+        android:id="@+id/feed_btn"
+        android:layout_width="10dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="338dp"
+        android:layout_marginLeft="333dp"
+        app:backgroundTint="@android:color/transparent"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:foreground="@drawable/ic_arrow_right"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="334dp"
+        android:layout_marginLeft="33dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="Feedback"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="404dp"
+        android:layout_marginLeft="33dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="Αποσύνδεση"/>
+
+    <EditText
+    android:layout_width="315dp"
+    android:layout_height="1dp"
+    android:background="#6e6e6e"
+    android:layout_marginTop="168dp"
+    android:layout_marginLeft="30dp"/>
+
+
+    <EditText
+        android:layout_width="315dp"
+        android:layout_height="1dp"
+        android:background="#6e6e6e"
+        android:layout_marginTop="237dp"
+        android:layout_marginLeft="30dp"/>
+
+
+    <EditText
+        android:layout_width="315dp"
+        android:layout_height="1dp"
+        android:background="#6e6e6e"
+        android:layout_marginTop="307dp"
+        android:layout_marginLeft="30dp"/>
+
+    <EditText
+        android:layout_width="315dp"
+        android:layout_height="1dp"
+        android:background="#6e6e6e"
+        android:layout_marginTop="377dp"
+        android:layout_marginLeft="30dp"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="640dp"
+        android:background="@drawable/ic_tabs_bg"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="630dp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="640dp"
+        android:background="@drawable/ic_tabs_wave">
+    </TextView>
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:backgroundTint="@android:color/transparent"
+        android:foreground="@drawable/ic_btn_play"
+        android:layout_marginTop="647dp"
+        android:layout_marginLeft="170dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/books_btn"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:foreground="@drawable/ic_book_sel"
+        app:backgroundTint="@android:color/transparent"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_marginTop="690dp"
+        android:layout_marginLeft="21dp"/>
+
+    <Button
+        android:id="@+id/misc_btn"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:foreground="@drawable/ic_misc"
+        app:backgroundTint="@android:color/transparent"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="690dp"/>
+
+    <Button
+        android:id="@+id/link_btn"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:backgroundTint="@android:color/transparent"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:foreground="@drawable/ic_link"
+        android:layout_marginTop="690dp"
+        android:layout_marginLeft="297dp"/>
+
+    <Button
+        android:id="@+id/settings_btn"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:backgroundTint="@android:color/transparent"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:foreground="@drawable/ic_settings"
+        android:layout_marginTop="690dp"
+        android:layout_marginLeft="360dp">
+
+
+
+
+
+    </Button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

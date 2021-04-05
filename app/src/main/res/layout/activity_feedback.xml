@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feedback"
+    android:background="#1b1b1d">
+
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="#000000"
+        android:backgroundTint="@color/black"
+        android:paddingTop="18dp"
+        android:text="Feedback"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+
+    <Button
+        android:id="@+id/back_btn2"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="21dp"
+        android:foreground="@drawable/ic_baseline_arrow_back_ios_24"
+        app:backgroundTint="@android:color/transparent"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="135dp"
+        android:layout_marginLeft="55dp"
+        android:text="Το σχόλιό σας"
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/add_photo"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="389dp"
+        android:background="@drawable/ic_btn_rounded_1"
+        android:text="Προσθήκη φωτογραφίας"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+
+
+        app:backgroundTint="#50A235"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:text="Υποβολή"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        android:textColor="#85c370"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="587dp"
+        app:backgroundTint="@android:color/transparent"
+        android:foreground="@drawable/ic_btn_rounded"
+        style="@style/Widget.AppCompat.Button.Borderless"
+
+
+        />
+
+    <EditText
+        android:id="@+id/feedback_txt"
+        android:layout_width="300dp"
+        android:layout_height="188dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="121dp"
+        android:backgroundTint="#50a235"
+        android:includeFontPadding="true"
+        android:paddingBottom="63dp"
+        android:paddingTop="33dp"/>
+
+
+</RelativeLayout>

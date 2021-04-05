@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar_top"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@color/black"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Σύνδεση"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:id="@+id/toolbar_title" />
+
+
+   </android.widget.Toolbar>

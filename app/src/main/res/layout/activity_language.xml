@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Language"
+    android:background="#1b1b1d">
+
+
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_height="30dp"
+        android:layout_width="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="21dp"
+        android:foreground="@drawable/ic_baseline_arrow_back_ios_24"
+        app:backgroundTint="@android:color/transparent"
+
+        />
+
+
+<ImageView
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+    android:src="@drawable/greece_flag_round_icon_copy"
+    android:layout_marginTop="187dp"
+    android:layout_marginLeft="33dp"
+    />
+
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/united_states_of_america_flag_round"
+        android:layout_marginTop="114dp"
+        android:layout_marginLeft="33dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:background="#000000"
+        android:backgroundTint="@color/black"
+        android:paddingTop="18dp"
+        android:text="Γλώσσα"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="15sp"
+    android:textColor="@color/white"
+    android:text="English"
+    android:layout_marginTop="124dp"
+    android:layout_marginLeft="75dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="Greek"
+        android:layout_marginTop="194dp"
+        android:layout_marginLeft="75dp"/>
+
+<CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="16dp"
+    android:layout_marginTop="198dp"
+    android:layout_marginLeft="326dp"
+    android:checkable="true"/>
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginLeft="326dp"
+        android:checkable="true"
+        >
+
+</CheckBox>
+    <EditText
+        android:layout_width="315dp"
+        android:layout_height="1dp"
+        android:background="#6e6e6e"
+        android:layout_marginTop="168dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:layout_width="315dp"
+        android:layout_height="1dp"
+        android:background="#6e6e6e"
+        android:layout_marginTop="237dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>
