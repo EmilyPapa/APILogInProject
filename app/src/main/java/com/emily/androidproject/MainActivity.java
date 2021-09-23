@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     case MotionEvent.ACTION_DOWN:
                         PasswordField.setInputType(InputType.TYPE_CLASS_TEXT);
                         break;
+                        
 
                 }
                 return true;
